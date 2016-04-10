@@ -1,0 +1,115 @@
+<html>
+<head>
+  <title>Spell Check Selection Options</title>
+  <style>
+    body {
+      font-family: arial, helvetica, sans-serif;
+    }
+    .banner {
+      width: 100%;
+      float: left;
+    }
+    .banner_left {
+      padding: 8px;
+      float: left;
+    }
+    .banner_right {
+      padding: 8px;
+    }
+    .body_wrapper {
+      width: 100%;
+      float: left;
+    }
+    .body_left {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      width: 50%;
+      float: left;
+    }
+    .body_right {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      width: 46%;
+      float: left;
+    }
+    .body_inner {
+      padding: 0 32px;
+    }
+    .browser_action {
+      vertical-align: middle;
+      margin: 0 2px 3px 2px;
+    }
+    .ctrl_label {
+      width: 100px;
+      float: left;
+    }
+    .ctrl_wrap {
+      margin: 18px 8px;
+    }
+    .ctrl {
+      width: 200px;
+    }
+    #hotkey {
+      font-size: 16px;
+      width: 15em;
+      margin-left: 12px;
+    }
+    #test {
+    }
+    #defaults {
+      margin-left: 24px;
+    }
+    #status {
+        height: 45px;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(36, 123, 171);
+        margin-bottom: 15px;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    #status.updated {
+        transition: 0.5s;
+        opacity: 1;
+    }
+  </style>
+  <script src="keycodes.js"></script>
+  <script src="options.js"></script>
+  <script src="content_script.js"></script>
+</head>
+<body>
+
+<div class="banner">
+  <h1>Spell Check Selection</h1>
+  <p>
+    This extension lets you use check spelling/grammar within a web page.
+  </p>
+</div>
+<div id="status">New search engine preferences saved</div>
+<div class="body_wrapper">
+  <div class="body_inner">
+    <h2>When to check selection</h2>
+    <ol>
+      <li>
+        Click on the
+        <img class="browser_action" src="SpeakSel19.png" alt="Spell Check Selection">
+        button in the toolbar &#x2197;
+      </li>
+      <li>
+        <input type="checkbox" class="c_sp_s_cb_setting" id="addToContextMenu"></input> Use "Check Selection's Spelling" from within the context menu
+      </li>
+      <li>
+        <input type="checkbox" class="c_sp_s_cb_setting" id="checkAsType"></input> Check text as you type
+      </li>
+      <li>
+        Use this hot key: <input type="text" id="hotKeyCombo"></input>
+      </li>
+    </ol>
+  </div>
+</div>
+
+</body>
+</html>
