@@ -1,0 +1,52 @@
+/* The Modal (background) */
+.cms__modal {
+    /*display: none;*/ /* Hidden by default */
+    display: block;
+z-index: 100000;
+    position: fixed; /* Stay in place */
+    /*z-index: 1;*/ /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /*overflow: auto; */
+    overflow:hidden;
+    /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.cms__modal textarea{
+  font-size:16px;
+  width:100%;
+height:100%;
+box-sizing: border-box;         /* For IE and modern versions of Chrome */
+-moz-box-sizing: border-box;    /* For Firefox                          */
+-webkit-box-sizing: border-box; /* For Safari                           */
+}
+/* Modal Content/Box */
+.cms__modal_content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height:50%;
+}
+
+/* The Close Button */
+.cms__close {
+    /*color: #aaa;*/
+    color:white;
+    position:fixed;
+    right:0;
+    top:0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cms__close:hover,
+.cms__close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Spell Check Selection",
+  "version": "1.0.0",
+  "description": "Spell checks the current selection.",
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": [
+      "keycodes.js",
+      "background.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": "spellcheck19.png",
+    "default_title": "Spell Check Selection"
+  },
+
+  "options_page": "options.html",
+
+  "minimum_chrome_version": "14",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": true,
+      "js": [
+        "keycodes.js",
+        "content_script.js"
+      ],
+      "css": [
+       "inject.css"
+     ]
+    }
+  ],
+
+  "icons": {
+    "16": "spellcheck16.png",
+    "48": "spellcheck48.png",
+    "128": "spellcheck128.png"
+  },
+
+  "manifest_version": 2
+}
