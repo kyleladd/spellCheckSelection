@@ -33,7 +33,10 @@
       "js": [
         "keycodes.js",
         "content_script.js"
-      ]
+      ],
+      "css": [
+       "inject.css"
+     ]
     }
   ],
 
